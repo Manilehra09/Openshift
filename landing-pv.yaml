@@ -8,5 +8,8 @@ spec:
   accessModes:
     - ReadOnlyMany
   persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    namespace: {project name}
+    name: landing-pvc
   hostPath:
     path: /mnt/landing-data  # Ensure this path exists on the host node
